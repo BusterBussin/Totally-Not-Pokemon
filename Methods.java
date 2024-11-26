@@ -2,7 +2,6 @@
 public class Methods {
     public boolean encounter(int rng, boolean encounter) {
         rng = (int) (Math.random() * 101);
-        System.out.println(rng);
         if (rng < 0 || rng > 100) {
             System.out.println("Missingno found!");
             System.out.println("Report the missingno to the creator.");
