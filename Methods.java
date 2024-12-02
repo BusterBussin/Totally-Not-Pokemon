@@ -63,12 +63,12 @@ public class Methods {
                     "Vileplume", "Arcanine", "Poliwrath", "Alakazam", "Machamp", "Victreebel", "Golem", "Slowbro",
                     "Gengar", "Gyarados", "Vaporeon", "Flareon", "Jolteon", "Snorlax", "Dragonite", "Crobat",
                     "Ampharos", "Bellossom", "Azumarill", "Espeon", "Umbreon", "Slowking", "Galarian Slowking",
-                    "Steelix", "Scizor", "Houndoom", "Kingdra", "Blissey", "Tyranitar" };
+                    "Steelix", "Scizor", "Houndoom", "Kingdra", "Blissey", "Tyranitar"};
             int i = (int) (Math.random() * superrare.length);
             return superrare[i];
         } else if (rng > 1989 && rng < 2000) {
-            String[] legend = { "Articuno", "Moltres", "Zapdos", "Mewtwo", "Raikou", "Entei", "Suicune", "Lugia",
-                    "Ho-oh" };
+            String[] legend = {"Articuno", "Moltres", "Zapdos", "Mewtwo", "Raikou", "Entei", "Suicune", "Lugia",
+                    "Ho-oh"};
             int i = (int) (Math.random() * legend.length);
             return legend[i];
         } else if (rng == 2000) {
