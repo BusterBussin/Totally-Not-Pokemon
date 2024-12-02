@@ -58,4 +58,12 @@ public class Methods {
             return null;
         }
     }
+
+    public boolean shiny() {
+        int shinyRate = (int)(Math.random() * 4097);
+        if (shinyRate == 4096) {
+            return true;
+        }
+        return false;
+    }
 }
