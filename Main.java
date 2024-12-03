@@ -1,32 +1,25 @@
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String args[]) {
-        Scanner scan = new Scanner(System.in); 
+        char catching = ' ';
+        Scanner scan = new Scanner(System.in);
         Methods method = new Methods();
-        int rng = 0;
-        char option = ' ';
-        int catchrng;
         boolean encounter = false;
+        int rng = 0;
+        String name = " ";
         boolean caught = false;
         boolean escaped = false;
         char action = ' ';
-        String name = " ";
-        System.out.println("Do you want to catch a pokemon? (Y/N)");
-        option = scan.nextLine().toUpperCase().charAt(0);
-        while (option != 'Y' && option != 'N') {
-            System.out.println("Invalid choice. Do you want to catch a pokemon? (Y/N)");
-            option = scan.nextLine().toUpperCase().charAt(0);
-        }
-        if (option == 'N') {
-            System.out.println("Goodbye.");
-            scan.close();
-            System.exit(0);
-        }
-        while (option == 'Y') { 
-            if (method.encounter(rng, encounter)) {
-                name =  method.getPokemon(rng);
+        int catchrng;
+
+        System.out.println("Do you want to catch a Pokemon? (Y/N)");
+        catching = scan.nextLine().toUpperCase().charAt(0);
+        while (catching == 'Y') {
+            method.encounter(rng, encounter);
+
+            if (encounter) {
+                method.getPokemon(rng);
                 if (method.shiny()) {
                     System.out.println("These colors look unusual... (Shiny)");
                 }
@@ -43,7 +36,7 @@ public class Main {
                             System.out.println(name + " broke free!");
                         }
                         if (!caught && action != 'R') {
-                            rng = (int)(Math.random() * 16);
+                            rng = (int) (Math.random() * 16);
                             if (rng == 15) {
                                 escaped = true;
                                 System.out.println(name + " escaped!");
@@ -58,14 +51,9 @@ public class Main {
                 caught = false;
                 escaped = false;
             } else {
-                System.out.println("No pokemon have been found.");
+                System.out.println("There are no pokemon out right now.");
             }
-        System.out.println("Do you want to play again?");
-        option = scan.nextLine().toUpperCase().charAt(0);
-        while (option != 'Y' && option != 'N') {
-            System.out.println("Invalid choice. Do you want to catch a pokemon? (Y/N)");
-            option = scan.nextLine().toUpperCase().charAt(0);
         }
-        }
+
     }
 }
