@@ -8,7 +8,7 @@ public class Methods {
             System.out.println("rng = " + rng);
             System.exit(0);
         }
-        if (rng > 50) {
+        if (rng > 25) {
             return true;
         } else {
             return false;
@@ -19,12 +19,12 @@ public class Methods {
         rng = (int) (Math.random() * 2001);
         if (rng <= 1000) {
             String[] common = { "Caterpie", "Weedle", "Pidgey", "Rattata", "Spearow", "Ekans", "Sandshrew", "Nidoran-F",
-                    "Nidoran-M", "Clefairy", "Vulpix", "Jigglypuff", "Zubat", "Oddish", "Paras", "Venonat", "Diglett",
-                    "Meowth", "Psyduck", "Mankey", "Growlithe", "Poliwag", "Abra", "Machop", "Bellsprout", "Tentacool",
-                    "Geodude", "Ponyta", "Slowpoke", "Magnemite", "Farfetch'd", "Doduo", "Seel", "Grimer", "Shellder",
-                    "Gastly", "Onix", "Drowzee", "Krabby", "Voltorb", "Exeggcute", "Cubone", "Lickitung", "Koffing",
-                    "Rhyhorn", "Chansey", "Tangela", "Horsea", "Goldeen", "Staryu", "Mr. Mime", "Scyther", "Jynx",
-                    "Electabuzz", "Magmar", "Pinsir", "Tauros", "Magikarp", "Ditto", "Eevee", "Porygon", "Omanyte",
+                    "Nidoran-M", "Clefairy", "Vulpix", "Alolan Vulpix", "Jigglypuff", "Zubat", "Oddish", "Paras", "Venonat", "Diglett", "Alolan Diglett",
+                    "Meowth", "Alolan Meowth", "Galarian Meowth", "Psyduck", "Mankey", "Growlithe", "Hisuian Growlithe", "Poliwag", "Abra", "Machop", "Bellsprout", "Tentacool",
+                    "Geodude", "Alolan Geodude", "Ponyta", "Galarian Ponyta", "Slowpoke", "Magnemite", "Farfetch'd", "Galarian Farfetch'd", "Doduo", "Seel", "Grimer", "Shellder",
+                    "Gastly", "Onix", "Drowzee", "Krabby", "Voltorb", "Hisuian Voltorb", "Exeggcute", "Cubone", "Lickitung", "Koffing",
+                    "Rhyhorn", "Chansey", "Tangela", "Horsea", "Goldeen", "Staryu", "Scyther", "Jynx",
+                    "Electabuzz", "Magmar", "Pinsir", "Tauros", "Paldean Tauros (Combat)", "Paldean Tauros (Blaze)", "Paldean Tauros (Aqua)", "Magikarp", "Ditto", "Eevee", "Porygon", "Omanyte",
                     "Kabuto", "Dratini", "Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Metapod", "Kakuna",
                     "Pidgeotto", "Raticate", "Fearow", "Nidorino", "Nidorina", "Chikorita", "Cyndaquil", "Totodile",
                     "Sentret", "Furret", "Hoothoot", "Noctowl", "Ledyba", "Ledian",
@@ -43,16 +43,21 @@ public class Methods {
                     "Trapinch", "Vibrava", "Cacnea", "Swablu", "Barboach", "Corphish", "Baltoy", "Lileep", "Anorith",
                     "Feebas", "Castform", "Castform (Sunny Form)", "Castform (Rainy Form)", "Castform (Snowy Form)",
                     "Kecleon", "Shuppet", "Duskull", "Wynaut", "Snorunt", "Spheal", "Clamperl", "Luvdisc", "Bagon",
-                    "Beldum" };
+                    "Beldum", "Turtwig", "Piplup", "Chimchar", "Starly", "Bidoof", "Kricketot", "Shinx", "Budew",
+                    "Cranidos", "Shelgon", "Burmy (Plant Cloak)", "Burmy (Sandy Cloak)", "Burmy (Trash Cloak)",
+                    "Mothim", "Combee", "Pachirisu", "Buizel", "Cherubi", "Shellos (West Sea)", "Shellos (East Sea)",
+                    "Drifloon", "Buneary", "Glameow", "Chingling", "Stunky", "Bronzor", "Bonsly", "Mime Jr", "Happiny",
+                    "Chatot", "Gible", "Munchlax", "Hippopotas", "Skorupi", "Croagunk", "Carnivine", "Finneon",
+                    "Mantyke", "Snover", "Alolan Grimer","Alolan Rattata", "Alolan Raticate", "Alolan Sandshrew"};
             int i = (int) (Math.random() * common.length);
             return common[i];
         } else if (rng > 1000 && rng < 1741) {
             String[] rare = { "Ivysaur", "Charmeleon", "Wartortle", "Raichu", "Butterfree", "Beedrill", "Arbok",
-                    "Sandslash", "Clefable", "Ninetales", "Primeape", "Poliwhirl", "Golbat", "Dugtrio", "Venomoth",
-                    "Persian", "Tentacruel", "Parasect", "Gloom", "Wigglytuff", "Golduck", "Kadabra", "Machoke",
-                    "Weepinbell", "Graveler", "Rapidash", "Magneton", "Dodrio", "Dewgong", "Muk", "Cloyster", "Haunter",
-                    "Onix", "Hypno", "Kingler", "Electrode", "Exeggutor", "Marowak", "Hitmonlee", "Hitmonchan",
-                    "Weezing", "Rhydon", "Kangaskhan", "Seadra", "Seaking", "Starmie", "Lapras", "Omastar", "Kabutops",
+                    "Sandslash", "Alolan Sandslash", "Clefable", "Ninetales", "Alolan Ninetales", "Primeape", "Poliwhirl", "Golbat", "Dugtrio", "Alolan Dugtrio", "Venomoth",
+                    "Persian", "Alolan Persian", "Tentacruel", "Parasect", "Gloom", "Wigglytuff", "Golduck", "Kadabra", "Machoke",
+                    "Weepinbell", "Graveler", "Alolan Graveler", "Rapidash", "Magneton", "Dodrio", "Dewgong", "Muk", "Alolan Muk", "Cloyster", "Haunter",
+                    "Onix", "Hypno", "Kingler", "Electrode", "Hisuian Electrode", "Exeggutor", "Alolan Exeggutor", "Marowak", "Alolan Marowak", "Hitmonlee", "Hitmonchan",
+                    "Weezing", "Galarian Weezing", "Rhydon", "Kangaskhan", "Seadra", "Seaking", "Mr. Mime", "Galarian Mr. Mime", "Starmie", "Lapras", "Omastar", "Kabutops",
                     "Aerodactyl", "Dragonair", "Sudowoodo", "Jumpluff", "Quagsire", "Wobbuffet", "Forretress",
                     "Granbull", "Heracross", "Ursaring", "Magcargo", "Piloswine", "Octillery", "Mantine", "Skarmory",
                     "Donphan", "Porygon2", "Hitmontop", "Pupitar", "Bayleef", "Combusken", "Marshtomp",
@@ -61,38 +66,44 @@ public class Methods {
                     "Sableye", "Mawile", "Lairon", "Medicham", "Manectric", "Swalot", "Torkoal", "Grumpig", "Cacturne",
                     "Zangoose", "Seviper", "Lunatone", "Solrock", "Whiscash", "Crawdaunt", "Claydol", "Craydily",
                     "Armaldo", "Banette", "Dusclops", "Tropius", "Chimecho", "Absol", "Glalie", "Sealeo", "Huntail",
-                    "Gorebyss", "Relicanth", "Shelgon", "Metang" };
+                    "Gorebyss", "Relicanth", "Shelgon", "Metang", "Riolu", "Grotle", "Monferno", "Prinplup", "Staravia",
+                    "Bibarel", "Kricketune", "Luxio", "Bastiodon", "Rampardos", "Wormadam (Plant Cloak)",
+                    "Wormadam (Sand Cloak)", "Wormadam (Sandy Cloak)", "Wormadam (Trash Cloak)", "Floatzel",
+                    "Cherrim (Overcast)", "Cherrim (Sunshine)", "Gastrodon (West Sea)", "Gastrodon (East Sea)",
+                    "Ambipom", "Drifblim", "Lopunny", "Mismagius", "Honchkrow", "Purugly", "Skuntank", "Bronzong",
+                    "Gabite", "Hippowdon", "Drapion", "Toxicroak", "Lumineon", "Yanmega"};
             int i = (int) (Math.random() * rare.length);
             return rare[i];
         } else if (rng > 1740 && rng < 1751) {
-            String[] unown = { "Unown (1 Form)", "Unown (A Form)",
+            String[] ect = { "Unown (1 Form)", "Unown (A Form)",
                     "Unown (B Form)", "Unown (C Form)", "Unown (D Form)", "Unown (E Form)", "Unown (F Form)",
                     "Unown (G Form)", "Unown (H Form)", "Unown (I Form)", "Unown (J Form)", "Unown (K Form)",
                     "Unown (L Form)", "Unown (M Form)", "Unown (N Form)", "Unown (O Form)", "Unown (P Form)",
                     "Unown (Q Form)", "Unown (R Form)", "Unown (S Form)", "Unown (T Form)", "Unown (U Form)",
                     "Unown (V Form)", "Unown (W Form)", "Unown (X Form)", "Unown (Y Form)", "Unown (Z Form)",
-                    "Unown (! Form)", "Unown (? Form)" };
-            int i = (int) (Math.random() * unown.length);
-            return unown[i];
+                    "Unown (! Form)", "Unown (? Form)", "Rotom", "Rotom (Heat)", "Rotom (Wash)", "Rotom (Frost)",
+                    "Rotom (Fan)", "Rotom (Mow)" };
+            int i = (int) (Math.random() * ect.length);
+            return ect[i];
         } else if (rng > 1750 && rng < 1990) {
             String[] superrare = { "Venusaur", "Charizard", "Blastoise", "Pidgeot", "Nidoqueen", "Nidoking",
-                    "Vileplume", "Arcanine", "Poliwrath", "Alakazam", "Machamp", "Victreebel", "Golem", "Slowbro",
+                    "Vileplume", "Arcanine", "Hisuian Arcanine", "Poliwrath", "Alakazam", "Machamp", "Victreebel", "Golem", "Alolan Golem", "Slowbro", "Galarian Slowbro",
                     "Gengar", "Gyarados", "Vaporeon", "Flareon", "Jolteon", "Snorlax", "Dragonite", "Crobat",
                     "Ampharos", "Bellossom", "Azumarill", "Espeon", "Umbreon", "Slowking", "Galarian Slowking",
                     "Steelix", "Scizor", "Houndoom", "Kingdra", "Blissey", "Tyranitar", "Sceptile", "Blaziken",
                     "Swampert", "Shiftry", "Gardevoir", "Breloom", "Slaking", "Hariyama", "Aggron", "Sharpedo",
-                    "Wailord", "Camerupt", "Flygon", "Altaria", "Milotic", "Salamence", "Metagross"};
+                    "Wailord", "Camerupt", "Flygon", "Altaria", "Milotic", "Salamence", "Metagross", "Torterra", "Infernape", "Empoleon", "Staraptor", "Luxray", "Roserade", "Vespiquen", "Spiritomb", "Garchomp", "Lucario", "Abomasnow", "Weavile", "Lickilicky", "Rhyperior", "Tangrowth", "Electivire", "MAgmortar", "Togekiss", "Leafeon", "Glaceon", "Gliscor", "Mamoswine", "Porygon-Z", "Gallade", "Probopass", "Dusknoir", "Froslass"};
             int i = (int) (Math.random() * superrare.length);
             return superrare[i];
         } else if (rng > 1989 && rng < 2000) {
-            String[] legend = { "Articuno", "Moltres", "Zapdos", "Mewtwo", "Raikou", "Entei", "Suicune", "Lugia",
+            String[] legend = { "Articuno", "Galarian Articuno", "Moltres", "Galarian Moltres", "Zapdos", "Galarian Zapdos", "Mewtwo", "Raikou", "Entei", "Suicune", "Lugia",
                     "Ho-oh", "Regirock", "Regice", "Registeel", "Latias", "Latios", "Kyogre", "Groudon",
                     "Primal Kyogre", "Primal Groudon", "Rayquaza", "Deoxys", "Deoxys (Attack Form)",
-                    "Deoxys (Defense Form)", "Deoxys (Speed Form)" };
+                    "Deoxys (Defense Form)", "Deoxys (Speed Form)", "Uxie", "Mesprit", "Azelf", "Dialga", "Dialga (Origin)", "Palkia", "Palkia (Origin)", "Heatran", "Regigigas", "Giratina (Absolute)", "Giratina (Origin)", "Crsselia", "Phione", "Manaphy"};
             int i = (int) (Math.random() * legend.length);
             return legend[i];
         } else if (rng == 2000) {
-            String[] myth = { "Mew", "Celebi", "Jirachi"};
+            String[] myth = { "Mew", "Celebi", "Jirachi", "Darkrai", "Shaymin (Land)", "Shaymin (Sky)", "Arceus"};
             int i = (int) (Math.random() * myth.length);
             return myth[i];
         } else {
