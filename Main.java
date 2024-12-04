@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -12,16 +13,19 @@ public class Main {
         boolean escaped = false;
         char action = ' ';
         int catchrng;
+        boolean shiny = false;
+        ArrayList<String> arrLst = new ArrayList<String>();
 
         System.out.println("Do you want to catch a Pokemon? (Y/N)");
         catching = scan.nextLine().toUpperCase().charAt(0);
         while (catching == 'Y') {
-            method.encounter(rng, encounter);
+            encounter = method.encounter(rng, encounter);
 
             if (encounter) {
-                method.getPokemon(rng);
+                name = method.getPokemon(rng);
                 if (method.shiny()) {
                     System.out.println("These colors look unusual... (Shiny)");
+                    shiny = true;
                 }
                 System.out.println("You found " + name + "!");
                 while (action != 'R' && !caught && !escaped) {
@@ -32,6 +36,11 @@ public class Main {
                         if (catchrng == 4) {
                             caught = true;
                             System.out.println(name + " was caught!");
+                            if (shiny) {
+                                arrLst.add("Shiny " + name);
+                            } else {
+                            arrLst.add(name);
+                            }
                         } else {
                             System.out.println(name + " broke free!");
                         }
@@ -50,8 +59,19 @@ public class Main {
                 action = ' ';
                 caught = false;
                 escaped = false;
+                shiny = false;
             } else {
                 System.out.println("There are no pokemon out right now.");
+            }
+            System.out.println("Would you like to catch another pokemon? (Y/N)\nYou can press I to view your pokemon.");
+            catching = scan.nextLine().toUpperCase().charAt(0);
+            if (catching == 'I') {
+                for (int i = 0; i < arrLst.size(); i++) {
+                    System.out.println(arrLst.get(i));
+                }
+                System.out.println("Press enter to continue.");
+                catching = 'Y';
+                scan.nextLine();
             }
         }
 
