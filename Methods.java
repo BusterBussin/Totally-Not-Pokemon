@@ -56,7 +56,12 @@ public class Methods {
                     "Aerodactyl", "Dragonair", "Sudowoodo", "Jumpluff", "Quagsire", "Wobbuffet", "Forretress",
                     "Granbull", "Heracross", "Ursaring", "Magcargo", "Piloswine", "Octillery", "Mantine", "Skarmory",
                     "Donphan", "Porygon2", "Hitmontop", "Pupitar", "Bayleef", "Combusken", "Marshtomp",
-                    "Quilava", "Croconaw", "Grovyle", "Mightyena", "Linoone", "Galarian Linoone", "Beautifly", "Dustox", "Lombre", "Swellow", "Pelipper", "Mssquerain", "Vigoroth", "Ninjask", "Shedinja", "Exploud", "Sableye", "Mawile", "Lairon", "Medicham", "Manectric", "Swalot", "Torkoal", "Grumpig", "Cacturne", "Zangoose", "Seviper", "Lunatone", "Solrock", "Whiscash", "Crawdaunt", "Claydol", "Craydily", "Armaldo", "Banette", "Dusclops", "Tropius", "Chimecho", "Absol", "Glalie", "Sealeo", "Huntail", "Gorebyss", "Relicanth", "Shelgon", "Metang"};
+                    "Quilava", "Croconaw", "Grovyle", "Mightyena", "Linoone", "Galarian Linoone", "Beautifly", "Dustox",
+                    "Lombre", "Swellow", "Pelipper", "Mssquerain", "Vigoroth", "Ninjask", "Shedinja", "Exploud",
+                    "Sableye", "Mawile", "Lairon", "Medicham", "Manectric", "Swalot", "Torkoal", "Grumpig", "Cacturne",
+                    "Zangoose", "Seviper", "Lunatone", "Solrock", "Whiscash", "Crawdaunt", "Claydol", "Craydily",
+                    "Armaldo", "Banette", "Dusclops", "Tropius", "Chimecho", "Absol", "Glalie", "Sealeo", "Huntail",
+                    "Gorebyss", "Relicanth", "Shelgon", "Metang" };
             int i = (int) (Math.random() * rare.length);
             return rare[i];
         } else if (rng > 1740 && rng < 1751) {
@@ -74,16 +79,20 @@ public class Methods {
                     "Vileplume", "Arcanine", "Poliwrath", "Alakazam", "Machamp", "Victreebel", "Golem", "Slowbro",
                     "Gengar", "Gyarados", "Vaporeon", "Flareon", "Jolteon", "Snorlax", "Dragonite", "Crobat",
                     "Ampharos", "Bellossom", "Azumarill", "Espeon", "Umbreon", "Slowking", "Galarian Slowking",
-                    "Steelix", "Scizor", "Houndoom", "Kingdra", "Blissey", "Tyranitar" };
+                    "Steelix", "Scizor", "Houndoom", "Kingdra", "Blissey", "Tyranitar", "Sceptile", "Blaziken",
+                    "Swampert", "Shiftry", "Gardevoir", "Breloom", "Slaking", "Hariyama", "Aggron", "Sharpedo",
+                    "Wailord", "Camerupt", "Flygon", "Altaria", "Milotic", "Salamence", "Metagross"};
             int i = (int) (Math.random() * superrare.length);
             return superrare[i];
         } else if (rng > 1989 && rng < 2000) {
             String[] legend = { "Articuno", "Moltres", "Zapdos", "Mewtwo", "Raikou", "Entei", "Suicune", "Lugia",
-                    "Ho-oh" };
+                    "Ho-oh", "Regirock", "Regice", "Registeel", "Latias", "Latios", "Kyogre", "Groudon",
+                    "Primal Kyogre", "Primal Groudon", "Rayquaza", "Deoxys", "Deoxys (Attack Form)",
+                    "Deoxys (Defense Form)", "Deoxys (Speed Form)" };
             int i = (int) (Math.random() * legend.length);
             return legend[i];
         } else if (rng == 2000) {
-            String[] myth = { "Mew", "Celebi" };
+            String[] myth = { "Mew", "Celebi", "Jirachi"};
             int i = (int) (Math.random() * myth.length);
             return myth[i];
         } else {
