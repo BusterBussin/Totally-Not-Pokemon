@@ -78,7 +78,8 @@ public class Main {
                 scan.nextLine();
             }
         }
-
+        scan.close();
+        System.exit(0);
     }
 
     public static void shinySound() {

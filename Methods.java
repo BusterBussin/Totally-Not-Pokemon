@@ -129,7 +129,7 @@ public class Methods {
                     "Probopass", "Dusknoir", "Froslass", "Yanmega", "Serperior", "Emboar", "Samurott",
                     "Hisuian Samurott", "Stoutland", "Gigalith", "Excadrill", "Conkeldurr", "Seismitoad", "Leavanny",
                     "Scolipede", "Krookodile", "Zoroark", "Hisuian Zoroark", "Reuniclus", "Vanilluxe", "Klinklang",
-                    "Eelektross", "Chandelure", "Haxorus", "Braviary", "Hisuian Braviary", "Hydreigon", "Volcarona"};
+                    "Eelektross", "Chandelure", "Haxorus", "Braviary", "Hisuian Braviary", "Hydreigon", "Volcarona" };
             int i = (int) (Math.random() * superrare.length);
             return superrare[i];
         } else if (rng > 1989 && rng < 2000) {
@@ -139,18 +139,36 @@ public class Methods {
                     "Primal Kyogre", "Primal Groudon", "Rayquaza", "Deoxys", "Deoxys (Attack Form)",
                     "Deoxys (Defense Form)", "Deoxys (Speed Form)", "Uxie", "Mesprit", "Azelf", "Dialga",
                     "Dialga (Origin)", "Palkia", "Palkia (Origin)", "Heatran", "Regigigas", "Giratina (Absolute)",
-                    "Giratina (Origin)", "Crsselia", "Phione", "Manaphy", "Cobalion", "Virizion", "Terrakion", "Tornadus", "Therian Tornadus", "Thundurus", "Therian Thundurus", "Reshiram", "Zekrom", "Landorus", "Therian Landorus", "Kyurem", "White Kyurem", "Black Kyurem", "Keldeo", "Resolute Keldeo", "Aria Meloetta", "Pirouette Meloetta"};
+                    "Giratina (Origin)", "Crsselia", "Phione", "Manaphy", "Cobalion", "Virizion", "Terrakion",
+                    "Tornadus", "Therian Tornadus", "Thundurus", "Therian Thundurus", "Reshiram", "Zekrom", "Landorus",
+                    "Therian Landorus", "Kyurem", "White Kyurem", "Black Kyurem", "Keldeo", "Resolute Keldeo",
+                    "Aria Meloetta", "Pirouette Meloetta" };
             int i = (int) (Math.random() * legend.length);
             return legend[i];
         } else if (rng == 2000) {
             String[] myth = { "Mew", "Celebi", "Jirachi", "Darkrai", "Shaymin (Land)", "Shaymin (Sky)", "Arceus",
-                    "Victini", "Genesect"};
+                    "Victini", "Genesect", "Mega" };
             int i = (int) (Math.random() * myth.length);
             String temp = myth[i];
-            if (temp.equals("Genesect")){
-                String[] genesect = {"Genesect", "Douse Drive Genesect", "Shock Drive Genesect", "Burn Drive Genesect", "Chill Drive Genesect"};
+            if (temp.equals("Genesect")) {
+                String[] genesect = { "Genesect", "Douse Drive Genesect", "Shock Drive Genesect", "Burn Drive Genesect",
+                        "Chill Drive Genesect" };
                 int j = (int) (Math.random() * genesect.length);
                 temp = genesect[j];
+            }
+            if (temp.equals("Mega")) {
+                String[] mega = { "Mega Venusaur", "Mega Charizard X", "Mega Charizard Y", "Mega Blastoise",
+                        "Mega Beedrill", "Mega Pidgeot", "Mega Alakazam", "Mega Slowbro", "Mega Gengar",
+                        "Mega Kangaskhan", "Mega Pinsir", "Mega Gyarados", "Mega Aerodactyl", "Mega Mewtwo X",
+                        "Mega Mewtwo Y", "Mega Ampharos", "Mega Steelix", "Mega Scizor", "Mega Heracross",
+                        "Mega Houndoom", "Mega Tyranitar", "Mega Sceptile", "Mega Blaziken", "Mega Swampert",
+                        "Mega Sableye", "Mega Mawile", "Mega Aggron", "Mega Medicham", "Mega Manetric", "Mega Sharpedo",
+                        "Mega Camerupt", "Mega Altaria", "Mega Banette", "Mega Absol", "Mega Glalie", "Mega Salamence",
+                        "Mega Metagross", "Mega Latias", "Mega Latios", "Mega Rayquaza", "Mega Lopunny",
+                        "Mega Garchomp", "Mega Lucario", "Mega Abomasnow", "Mega Gallade", "Mega Audino",
+                        "Mega Diancie" };
+                int k = (int)(Math.random() * mega.length);
+                return mega[i];
             }
             return temp;
         } else {
