@@ -95,7 +95,7 @@ public class Methods {
                     "Watchog", "Herdier", "Liepard", "Simisage", "Simisear", "Simipour", "Musharna", "Tranquill",
                     "Unfezant", "Zebstrika", "Boldore", "Swoobat", "Audino", "Gurdurr", "Palpitoad",
                     "Swadloon", "Whirlipede", "Whimsicott", "Lilligant", "Hisuian Lilligant", "Krokorok", "Darmanitan",
-                    "Galarian Darmanitan", "MAractus", "Crustle", "Scrafty", "Cofagrigus", "Carracosta", "Archeops",
+                    "Galarian Darmanitan", "Maractus", "Crustle", "Scrafty", "Cofagrigus", "Carracosta", "Archeops",
                     "Garbodor", "Cinccino", "Gothorita", "Duosion", "Swanna", "Vanillish", "Sawsbuck (Spring)",
                     "Sawsbuck (Summer)", "Sawsbuck (Fall)", "Sawsbuck (Winter)", "Escavalier", "Amoonguss",
                     "Jellicent-M", "Jellicent-F", "Alomomola", "Galvantula", "Ferrothorn", "Klang", "Eelektrik",

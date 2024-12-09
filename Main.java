@@ -1,5 +1,9 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class Main {
     public static void main(String args[]) {
@@ -15,7 +19,6 @@ public class Main {
         int catchrng;
         boolean shiny = false;
         ArrayList<String> arrLst = new ArrayList<String>();
-
         System.out.println("Do you want to catch a Pokemon? (Y/N)");
         catching = scan.nextLine().toUpperCase().charAt(0);
         while (catching == 'Y') {
@@ -24,6 +27,7 @@ public class Main {
             if (encounter) {
                 name = method.getPokemon(rng);
                 if (method.shiny()) {
+                    shinySound();
                     System.out.println("These colors look unusual... (Shiny)");
                     shiny = true;
                 }
@@ -75,5 +79,18 @@ public class Main {
             }
         }
 
+    }
+
+    public static void shinySound() {
+        try {
+            AudioInputStream audioInputStream = AudioSystem
+                    .getAudioInputStream(new File("shiny.wav").getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+        } catch (Exception ex) {
+            System.out.println("Error with playing sound.");
+            ex.printStackTrace();
+        }
     }
 }
