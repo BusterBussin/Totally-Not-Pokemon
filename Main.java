@@ -21,7 +21,7 @@ public class Main {
         ArrayList<String> arrLst = new ArrayList<String>();
         System.out.println("Do you want to catch a Pokemon? (Y/N)");
         catching = scan.nextLine().toUpperCase().charAt(0);
-        while (catching == 'Y') {
+        while (catching == 'Y' || catching == 'C') {
             encounter = method.encounter(rng, encounter);
 
             if (encounter) {

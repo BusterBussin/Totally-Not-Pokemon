@@ -36,7 +36,7 @@ public class Methods {
                     "Spinarak", "Ariados", "Chinchou", "Lanturn", "Pichu", "Cleffa", "Igglybuff", "Togepi", "Togetic",
                     "Natu", "Xatu", "Mareep", "Flaaffy", "Marill", "Hoppip", "Skiploom", "Aipom", "Sunkern", "Sunflora",
                     "Yanma", "Wooper", "Paldean Wooper", "Murkrow", "Misdreavus", "Girafarig", "Pineco", "Dunsparce",
-                    "Gligar", "Snubbull", "Qwilfish", "Hisuian Qwilfish", "Shuckle", "Sneasel", "Hisuian Form Sneasel",
+                    "Gligar", "Snubbull", "Qwilfish", "Hisuian Qwilfish", "Shuckle", "Sneasel", "Hisuian Sneasel",
                     "Teddiursa", "Slugma",
                     "Swinub", "Corsola", "Galarian Corsola", "Remoraid", "Delibird", "Houndour", "Panphy", "Stantler",
                     "Smeargle", "Tyrogue", "Smoochum", "Elekid", "Magby", "Miltank", "Larvitar", "Treecko",
@@ -142,7 +142,7 @@ public class Methods {
                     "Giratina (Origin)", "Crsselia", "Phione", "Manaphy", "Cobalion", "Virizion", "Terrakion",
                     "Tornadus", "Therian Tornadus", "Thundurus", "Therian Thundurus", "Reshiram", "Zekrom", "Landorus",
                     "Therian Landorus", "Kyurem", "White Kyurem", "Black Kyurem", "Keldeo", "Resolute Keldeo",
-                    "Aria Meloetta", "Pirouette Meloetta" };
+                    "Aria Meloetta", "Pirouette Meloetta"};
             int i = (int) (Math.random() * legend.length);
             return legend[i];
         } else if (rng == 2000) {
