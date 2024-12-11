@@ -63,7 +63,10 @@ public class Methods {
                     "Deerling (Summer)", "Deerling (Fall)", "Deerling (Winter)", "Emolga", "Karrablast", "Foongus",
                     "Frillish (Male)", "Frillish (Female)", "Joltik", "Ferroseed", "Klink", "Tynamo", "Elgyem",
                     "Litwick", "Axew", "Cubchoo", "Shelmet", "Stunfisk", "Galarian Stunfisk", "Mienfoo", "Golett",
-                    "Pawniard", "Rufflet", "Vullaby", "Deino", "Larvesta" };
+                    "Pawniard", "Rufflet", "Vullaby", "Deino", "Larvesta", "Chespin", "Fennekin", "Froakie", "Bunnelby",
+                    "Fletchling", "Scatterbug", "Litleo", "Flabébé", "Skiddo", "Pancham", "Furfrou", "Espurr",
+                    "Honedge", "Spritzee", "Swirlix", "Inkay", "Binacle", "Skrelp", "Clauncher", "Helioptile", "Tyrunt",
+                    "Amaura", "Dedenne", "Carbink", "Goomy", "Klefki", "Phantump", "Bergmite", "Noibat" };
             int i = (int) (Math.random() * common.length);
             return common[i];
         } else if (rng > 1000 && rng < 1741) {
@@ -100,7 +103,11 @@ public class Methods {
                     "Sawsbuck (Summer)", "Sawsbuck (Fall)", "Sawsbuck (Winter)", "Escavalier", "Amoonguss",
                     "Jellicent-M", "Jellicent-F", "Alomomola", "Galvantula", "Ferrothorn", "Klang", "Eelektrik",
                     "Beheeyem", "Lampent", "Fraxure", "Beartic", "Cryonogal", "Accelgor", "Mienshao", "Druddigon",
-                    "Golurk", "Bisharp", "Bouffalant", "Mandibuzz", "Heatmor", "Durant", "Zweilous" };
+                    "Golurk", "Bisharp", "Bouffalant", "Mandibuzz", "Heatmor", "Durant", "Zweilous", "Quilladin",
+                    "Braixen", "Frogadier", "Diggersby", "Fletchinder", "Spewpa", "Pyroar", "Floette", "Gogoat",
+                    "Furfrou", "Mewostic-M", "Meowstic-F", "Doublade", "Aromatisse", "Slurpuff", "Malamar",
+                    "Barbaracle", "Dragalge", "Clawitzer", "Heliolisk", "Aurorus", "Hawlucha", "Sliggoo",
+                    "Hisuian Sliggoo", "Gourgeist" };
             int i = (int) (Math.random() * rare.length);
             return rare[i];
         } else if (rng > 1740 && rng < 1751) {
@@ -129,7 +136,10 @@ public class Methods {
                     "Probopass", "Dusknoir", "Froslass", "Yanmega", "Serperior", "Emboar", "Samurott",
                     "Hisuian Samurott", "Stoutland", "Gigalith", "Excadrill", "Conkeldurr", "Seismitoad", "Leavanny",
                     "Scolipede", "Krookodile", "Zoroark", "Hisuian Zoroark", "Reuniclus", "Vanilluxe", "Klinklang",
-                    "Eelektross", "Chandelure", "Haxorus", "Braviary", "Hisuian Braviary", "Hydreigon", "Volcarona" };
+                    "Eelektross", "Chandelure", "Haxorus", "Braviary", "Hisuian Braviary", "Hydreigon", "Volcarona",
+                    "Chesnaught", "Delphox", "Greninja", "Talonflame", "Vivillon", "Florges", "Pangoro",
+                    "Aegislash (Shield Form)", "Aegislash (Blade Form)", "Malamar", "Tyrantrum", "Sylveon", "Goodra",
+                    "Hisuian Goodra", "Trevenant", "Avalugg", "Hisuian Avalugg", "Noivern" };
             int i = (int) (Math.random() * superrare.length);
             return superrare[i];
         } else if (rng > 1989 && rng < 2000) {
@@ -142,12 +152,13 @@ public class Methods {
                     "Giratina (Origin)", "Crsselia", "Phione", "Manaphy", "Cobalion", "Virizion", "Terrakion",
                     "Tornadus", "Therian Tornadus", "Thundurus", "Therian Thundurus", "Reshiram", "Zekrom", "Landorus",
                     "Therian Landorus", "Kyurem", "White Kyurem", "Black Kyurem", "Keldeo", "Resolute Keldeo",
-                    "Aria Meloetta", "Pirouette Meloetta"};
+                    "Aria Meloetta", "Pirouette Meloetta", "Neutral Xerneas", "Active Xerneas", "Yveltal",
+                    "Zygarde (50%)", "Zygarde (10%)", "Complete Zygarde" };
             int i = (int) (Math.random() * legend.length);
             return legend[i];
         } else if (rng == 2000) {
             String[] myth = { "Mew", "Celebi", "Jirachi", "Darkrai", "Shaymin (Land)", "Shaymin (Sky)", "Arceus",
-                    "Victini", "Genesect", "Mega" };
+                    "Victini", "Genesect", "Mega", "Diancie", "Confined Hoopa", "Unbound Hoopa", "Volcanion" };
             int i = (int) (Math.random() * myth.length);
             String temp = myth[i];
             if (temp.equals("Genesect")) {
@@ -167,7 +178,7 @@ public class Methods {
                         "Mega Metagross", "Mega Latias", "Mega Latios", "Mega Rayquaza", "Mega Lopunny",
                         "Mega Garchomp", "Mega Lucario", "Mega Abomasnow", "Mega Gallade", "Mega Audino",
                         "Mega Diancie" };
-                int k = (int)(Math.random() * mega.length);
+                int k = (int) (Math.random() * mega.length);
                 return mega[i];
             }
             return temp;
