@@ -86,6 +86,7 @@ public class Main {
             } else {
                 System.out.println("There are no pokemon out right now.");
             }
+            savePKMInfoToFile(pkmInfo, "pokemon.json");
             System.out.println("Would you like to catch another pokemon? (Y/N)\nYou can press I to view your pokemon.");
             catching = scan.nextLine().toUpperCase().charAt(0);
             if (catching == 'I') {
@@ -123,7 +124,7 @@ public class Main {
             Object obj = parser.parse(new FileReader(filename));
             JSONObject jsonObject = (JSONObject) obj;
             return jsonObject;
-        } catch (IOException | ParseException e) {
+        } catch (Exception e) {
             System.out.println("Error reading file, initializing empty album info.");
             return null; // Return null if the file does not exist or there is an error
         }
