@@ -132,7 +132,7 @@ public class Methods {
                     "Wailord", "Camerupt", "Flygon", "Altaria", "Milotic", "Salamence", "Metagross", "Torterra",
                     "Infernape", "Empoleon", "Staraptor", "Luxray", "Roserade", "Vespiquen", "Spiritomb", "Garchomp",
                     "Lucario", "Abomasnow", "Weavile", "Lickilicky", "Rhyperior", "Tangrowth", "Electivire",
-                    "MAgmortar", "Togekiss", "Leafeon", "Glaceon", "Gliscor", "Mamoswine", "Porygon-Z", "Gallade",
+                    "Magmortar", "Togekiss", "Leafeon", "Glaceon", "Gliscor", "Mamoswine", "Porygon-Z", "Gallade",
                     "Probopass", "Dusknoir", "Froslass", "Yanmega", "Serperior", "Emboar", "Samurott",
                     "Hisuian Samurott", "Stoutland", "Gigalith", "Excadrill", "Conkeldurr", "Seismitoad", "Leavanny",
                     "Scolipede", "Krookodile", "Zoroark", "Hisuian Zoroark", "Reuniclus", "Vanilluxe", "Klinklang",
