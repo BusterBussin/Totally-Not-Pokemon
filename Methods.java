@@ -232,9 +232,10 @@ public class Methods {
         }
     }
 
-    public boolean shiny() {
-        int shinyRate = (int) (Math.random() * 4097);
-        if (shinyRate == 4096) {
+    public boolean shiny(int pity) {
+        int rngNumber = pity + 1;
+        int shinyRate = (int) (Math.random() * rngNumber);
+        if (shinyRate == pity) {
             return true;
         }
         return false;

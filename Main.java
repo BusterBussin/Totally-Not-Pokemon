@@ -10,15 +10,18 @@ import javax.sound.sampled.Clip;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+// import org.json.simple.parser.ParseException;
 
 public class Main {
     public static void main(String args[]) {
         char catching = ' ';
         Scanner scan = new Scanner(System.in);
+        AnsiColors c = new AnsiColors();
         Methods method = new Methods();
         boolean encounter = false;
         int rng = 0;
+        int numCaught = 0;
+        int shinyPity = 4096;
         String name = " ";
         boolean caught = false;
         boolean escaped = false;
@@ -35,29 +38,38 @@ public class Main {
         JSONArray pokemonList = (JSONArray) pkmInfo.get("Pokemon");
         System.out.println("Do you want to catch a Pokemon? (Y/N)");
         catching = scan.nextLine().toUpperCase().charAt(0);
+        //catching = 'C';
         while (catching == 'Y' || catching == 'C') {
             encounter = method.encounter(rng, encounter);
 
             if (encounter) {
                 name = method.getPokemon(rng);
-                if (method.shiny()) {
+                if (method.shiny(shinyPity)) {
                     shinySound();
-                    System.out.println("These colors look unusual... (Shiny)");
+                    System.out.println(c.yellow() + "These colors look unusual... (Shiny)" + c.reset());
                     shiny = true;
                 }
                 System.out.println("You found " + name + "!");
                 while (action != 'R' && !caught && !escaped) {
                     System.out.println("\t C to catch \n\t R to run");
                     action = scan.nextLine().toUpperCase().charAt(0);
+                    //action = 'C';
                     if (action == 'C') {
                         catchrng = (int) (Math.random() * 5);
                         if (catchrng == 4) {
                             caught = true;
                             System.out.println(name + " was caught!");
+                            numCaught = numCaught + 1;
+                            if (numCaught > 100) {
+                                if (shinyPity != 2) {
+                                    shinyPity = shinyPity - 2;
+                                }
+                            }
                             JSONObject newPokemon = new JSONObject();
                             if (shiny) {
                                 // If shiny, save the pokemon as "Shiny" and the pokemon name
-                                newPokemon.put("Name", "Shiny" + name);
+                                newPokemon.put("Name", "Shiny " + name);
+                                shinyPity = 4096;
                             } else {
                                 // Else, save the pokemon normally.
                                 newPokemon.put("Name", name);
@@ -87,8 +99,12 @@ public class Main {
                 System.out.println("There are no pokemon out right now.");
             }
             savePKMInfoToFile(pkmInfo, "pokemon.json");
+            if (numCaught == 100) {
+                System.out.println(c.yellow() + "Shiny pity activated!" + c.reset());
+            }
             System.out.println("Would you like to catch another pokemon? (Y/N)\nYou can press I to view your pokemon.");
             catching = scan.nextLine().toUpperCase().charAt(0);
+            //catching = 'C';
             if (catching == 'I') {
                 for (Object obj : pokemonList) {
                     JSONObject pokemon = (JSONObject) obj;
