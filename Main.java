@@ -17,6 +17,7 @@ public class Main {
         char catching = ' ';
         Scanner scan = new Scanner(System.in);
         AnsiColors c = new AnsiColors();
+        c.reset();
         Methods method = new Methods();
         boolean encounter = false;
         int rng = 0;
@@ -36,9 +37,10 @@ public class Main {
             pkmInfo.put("Pokemon", new JSONArray());
         }
         JSONArray pokemonList = (JSONArray) pkmInfo.get("Pokemon");
+        System.out.println("Welcome to " + c.red() + "'Totally Not Pokemon!'" + c.reset());
         System.out.println("Do you want to catch a Pokemon? (Y/N)");
         catching = scan.nextLine().toUpperCase().charAt(0);
-        //catching = 'C';
+        // catching = 'C';
         while (catching == 'Y' || catching == 'C') {
             encounter = method.encounter(rng, encounter);
 
@@ -53,7 +55,7 @@ public class Main {
                 while (action != 'R' && !caught && !escaped) {
                     System.out.println("\t C to catch \n\t R to run");
                     action = scan.nextLine().toUpperCase().charAt(0);
-                    //action = 'C';
+                    // action = 'C';
                     if (action == 'C') {
                         catchrng = (int) (Math.random() * 5);
                         if (catchrng == 4) {
@@ -104,7 +106,7 @@ public class Main {
             }
             System.out.println("Would you like to catch another pokemon? (Y/N)\nYou can press I to view your pokemon.");
             catching = scan.nextLine().toUpperCase().charAt(0);
-            //catching = 'C';
+            // catching = 'C';
             if (catching == 'I') {
                 for (Object obj : pokemonList) {
                     JSONObject pokemon = (JSONObject) obj;
@@ -116,6 +118,10 @@ public class Main {
             }
         }
         savePKMInfoToFile(pkmInfo, "pokemon.json");
+        System.out.println("Progress saved.");
+        System.out.println(c.red() + "Totally " + c.black() +  "NOT " + c.yellow() + "Pokemon" + c.reset() + " created by: " + c.blue() + "Buster" + c.yellow() + "Bussin" + c.reset());
+        System.out.println(c.red() + "A" + c.green() + "n" + c.purple() + "s" + c.yellow() + "i" + c.cyan() + "C" + c.red() + "o" + c.green() + "l" + c.purple() + "o" + c.yellow() + "r" + c.cyan() + "s" + c.reset() + " by: " + c.green() + "AwesomeGearBoy" + c.reset());
+        System.out.println(c.yellow() + "Thank you for playing!" + c.reset());
         scan.close();
         System.exit(0);
     }
